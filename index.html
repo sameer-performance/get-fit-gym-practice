@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Fit Gym</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        section {
+            max-width: 700px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .services {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .service {
+            background: #eee;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        input, select, button {
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        button {
+            background: #111;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>GET FIT GYM</h1>
+    <p>Transform Your Body. Build Your Strength.</p>
+</header>
+
+<section>
+    <h2>Our Services</h2>
+
+    <div class="services">
+        <div class="service">Strength Training</div>
+        <div class="service">Personal Training</div>
+        <div class="service">Fat Loss</div>
+    </div>
+</section>
+
+<section>
+    <h2>Free Trial Enquiry</h2>
+
+    <form id="enquiryForm">
+
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <input type="tel" id="phone" name="phone" placeholder="Mobile Number" required>
+
+        <select id="goal" name="goal" required>
+            <option value="">Select Your Goal</option>
+            <option value="fat_loss">Fat Loss</option>
+            <option value="muscle_gain">Muscle Gain</option>
+            <option value="strength">Strength Training</option>
+        </select>
+
+        <button type="submit">Submit Enquiry</button>
+
+    </form>
+</section>
+
+<script>
+    document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        alert("Thank you! Your enquiry has been submitted.");
+    });
+</script>
+
+</body>
+</html>
